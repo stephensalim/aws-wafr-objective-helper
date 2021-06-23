@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Amazon Web Services Well-Architected Framework Review Helper
 // @namespace    http://console.aws.amazon.com/wellarchitected/
-// @version      0.4.1
-// @description  Bug fix in Helper-DOM & add some frontend handling in conformance pack. Update bahasa (.id.json) for context helper. 
+// @version      0.4.4
+// @description  Fix the anchor shifting problem. Button Width fixed, JSON cache disabled. 
 // @include      https://raw.githubusercontent.com/juntinyeh/aws-wafr-objective-helper/main/
 // @require      WAFR-Context-Helper.user.js
 // @require      WAFR-FollowUP-Helper.user.js
@@ -69,7 +69,7 @@ function DOM_Append_Helper_Div() {
     if(OH_R_HELPER_CONTAINER_DIV_READY) return;
 
     var objs = document.getElementsByClassName("awsui-form-field awsui-form-field-stretch");
-    if(objs[0] != undefined)
+    if(objs[0] != undefined && objs.length > 1)
     {
         objs[0].appendChild(oh_div_helper_header);
         objs[0].appendChild(oh_div_helper);
