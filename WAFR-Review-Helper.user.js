@@ -28,7 +28,7 @@ set Log_Level = 'debug' if you want to try something new and use the debug(log_m
 var LOG_LEVEL = '';
 
 var OH_ENABLE_CONTEXT_HELPER = true;
-var OH_ENABLE_FOLLOWUP_HELPER = false;
+var OH_ENABLE_FOLLOWUP_HELPER = true;
 var OH_ENABLE_CONFORMANCE_HELPER = true;
 /*
 Note: To append a new module into this helper chain, please append a switch flag here.
